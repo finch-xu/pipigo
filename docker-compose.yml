@@ -1,0 +1,12 @@
+services:
+  pipigo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8899:8899"
+    volumes:
+      - ./db:/app/db
+    environment:
+      TZ: Asia/Shanghai
