@@ -6,15 +6,23 @@
 
 <h1 align="center">pipiGo</h1>
 
+<div align="center">
+   English | <a href="./README-zh.md">中文文档</a>
+</div>
+
 ###
 
-极简接口请求定时任务管理器
+A minimalistic task scheduler for periodic API requests.
 
-源自我的一个需求，能够每3h请求一下dify工作流的api接口，执行一些对应的任务，需要有可视化的webui。
+Born from a personal need: I wanted to trigger a Dify workflow API every 3 hours and run certain tasks, with a simple
+web UI to manage everything.
 
-找了很多开源框架，功能够很全也很臃肿，我只想要这个功能，如果能够增删改查任务就能更好了，然后找到了大模型，他拍了一下我的头，说：开悟了。于是就有了这个项目。    
+I looked into many open-source frameworks, but they were either too heavy or overloaded with features I didn’t
+need.     
+All I wanted was a lightweight tool to create, read, update, delete, and schedule HTTP requests — nothing more.     
+Then came the moment of inspiration (thanks, large language model 🤖), and pipiGo was born.
 
-### 部署
+### Deployment
 
 ```bash
 docker compose build
@@ -22,9 +30,9 @@ docker compose build
 docker compose up -d
 ```
 
-任务数据自动保存到sqlite文件中。
+Task data is automatically saved to an SQLite file.
 
-### ui
+### UI
 
 ![创建任务](./screenshot/ui-1.png)
 
