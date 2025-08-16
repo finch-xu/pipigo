@@ -63,6 +63,9 @@ func main() {
 
 	r := gin.Default()
 
+	// 提供静态文件服务
+	r.Static("/js", "./static/js")
+
 	// 首页
 	r.GET("/", func(ctx *gin.Context) {
 		ctx.Data(http.StatusOK, "text/html; charset=utf-8", []byte(htmlPage))
@@ -269,8 +272,8 @@ const htmlPage = `
 <head>
 <meta charset="utf-8">
 <title>定时任务管理器</title>
-<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/js/vue.global.prod.js"></script>
+<script src="/js/axios.min.js"></script>
 <style>
 	body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; padding: 20px; background-color: #f4f7f9; color: #333; }
 	#app { max-width: 900px; margin: 0 auto; }
